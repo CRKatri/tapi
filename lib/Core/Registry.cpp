@@ -122,7 +122,7 @@ Error Registry::writeFile(const std::string &path, const InterfaceFile *file,
                           VersionedFileType fileType) const {
   std::error_code ec;
   {
-    raw_fd_ostream os(path, ec, sys::fs::F_Text);
+    raw_fd_ostream os(path, ec, sys::fs::OF_Text);
     if (ec)
       return errorCodeToError(ec);
     auto error = writeFile(os, file, fileType);

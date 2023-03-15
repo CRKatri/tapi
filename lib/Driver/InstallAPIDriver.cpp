@@ -488,7 +488,7 @@ getCodeCoverageSymbols(DiagnosticsEngine &diag,
   FileRemover removeOutputFile(outputFile);
 
   std::error_code ec;
-  raw_fd_ostream input(inputFile, ec, sys::fs::F_None);
+  raw_fd_ostream input(inputFile, ec, sys::fs::OF_None);
   if (ec)
     return make_error<StringError>("cannot open input file", ec);
   input << "static int foo() { return 0; }\n";

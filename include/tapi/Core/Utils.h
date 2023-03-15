@@ -19,8 +19,8 @@
 #include "tapi/Defines.h"
 #include "llvm/ADT/ArrayRef.h"
 #include "llvm/ADT/StringRef.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
+#include "llvm/TextAPI/Platform.h"
 
 TAPI_NAMESPACE_INTERNAL_BEGIN
 
@@ -39,9 +39,6 @@ std::string findLibrary(StringRef installName, FileManager &fm,
                         ArrayRef<std::string> searchPaths);
 
 ArchitectureSet mapToArchitectureSet(ArrayRef<llvm::Triple> targets);
-std::string getOSAndEnvironmentName(llvm::MachO::PlatformKind Platform,
-                                    std::string Version);
-llvm::MachO::PlatformKind getPlatformFromName(StringRef name);
 
 TAPI_NAMESPACE_INTERNAL_END
 

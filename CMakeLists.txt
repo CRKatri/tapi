@@ -1,7 +1,3 @@
-if(NOT APPLE)
-  message(FATAL_ERROR "Unsupported configuration.")
-endif()
-
 set(TAPI_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(TAPI_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 
@@ -65,12 +61,12 @@ configure_file(
   ${CMAKE_CURRENT_BINARY_DIR}/include/tapi/Version.inc)
 
 # Check if the linker support -no_inits.
-check_linker_flag("-Wl,-no_inits" LINKER_SUPPORTS_NO_INITS)
+llvm_check_linker_flag(CXX "-Wl,-no_inits" LINKER_SUPPORTS_NO_INITS)
 
 # MARZIPAN RENAME: We might need to update this. This will also require an
 # update of the linker on the CI bots.
 # Check if the linker has iosmac support.
-check_linker_flag("-Wl,-iosmac_version_min,13.0" LINKER_SUPPORTS_IOSMAC)
+llvm_check_linker_flag(CXX "-Wl,-iosmac_version_min,13.0" LINKER_SUPPORTS_IOSMAC)
 # MARZIPAN RENAME
 
 # Check if i386 is supported.
@@ -178,6 +174,13 @@ function(tapi_clang_tablegen)
     set_property(GLOBAL APPEND PROPERTY TAPI_TABLEGEN_TARGETS ${CTG_TARGET})
   endif()
 endfunction(tapi_clang_tablegen)
+
+set(CLANG_INCLUDE_DIR ${LLVM_MAIN_SRC_DIR}/../clang/include )
+# Specify TableGen output dir for things like DiagnosticCommonKinds.inc,
+# DiagnosticDriverKinds.inc (required for reporting diagnostics)
+set(CLANG_TABLEGEN_OUTPUT_DIR ${CMAKE_BINARY_DIR}/tools/clang/include)
+include_directories(SYSTEM ${CLANG_TABLEGEN_OUTPUT_DIR})
+include_directories(SYSTEM ${CLANG_INCLUDE_DIR})
 
 include_directories(BEFORE
   ${CMAKE_CURRENT_BINARY_DIR}/include

@@ -21,7 +21,7 @@
 #include "llvm/BinaryFormat/Magic.h"
 #include "llvm/Support/Error.h"
 #include "llvm/Support/MemoryBuffer.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
 
 using llvm::file_magic;
 using llvm::Error;

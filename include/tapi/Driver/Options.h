@@ -21,8 +21,8 @@
 #include "clang/Frontend/FrontendOptions.h"
 #include "llvm/ADT/Triple.h"
 #include "llvm/Option/Option.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/Architecture.h"
+#include "llvm/TextAPI/Platform.h"
 #include <set>
 #include <string>
 #include <vector>

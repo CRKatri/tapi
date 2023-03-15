@@ -27,7 +27,7 @@
 #include "llvm/Support/Path.h"
 #include "llvm/Support/Regex.h"
 #include "llvm/Support/raw_ostream.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
+#include "llvm/TextAPI/Architecture.h"
 #include <string>
 
 using namespace llvm;
@@ -314,7 +314,7 @@ bool Driver::GenerateAPITests::run(DiagnosticsEngine &diag, Options &opts) {
 
   std::error_code ec;
   raw_fd_ostream os(opts.driverOptions.outputPath, ec,
-                    sys::fs::OpenFlags::F_None);
+                    sys::fs::OpenFlags::OF_None);
   if (ec) {
     errs() << "error: " << ec.message() << ": " << opts.driverOptions.outputPath
            << "\n";

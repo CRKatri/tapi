@@ -21,7 +21,7 @@
 #include "tapi/Driver/Options.h"
 #include "tapi/Driver/Snapshot.h"
 #include "clang/Driver/DriverDiagnostic.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
+#include "llvm/TextAPI/Architecture.h"
 
 using namespace llvm;
 using namespace llvm::MachO;

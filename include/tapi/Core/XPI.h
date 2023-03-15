@@ -27,9 +27,9 @@
 #include "llvm/ADT/StringRef.h"
 #include "llvm/ADT/iterator.h"
 #include "llvm/Support/Allocator.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
-#include "llvm/TextAPI/MachO/Target.h"
+#include "llvm/TextAPI/Architecture.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
+#include "llvm/TextAPI/Target.h"
 #include <map>
 #include <utility>
 

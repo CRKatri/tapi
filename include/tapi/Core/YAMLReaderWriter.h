@@ -20,7 +20,7 @@
 #include "tapi/Defines.h"
 #include "llvm/BinaryFormat/Magic.h"
 #include "llvm/Support/Error.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
 #include <string>
 
 namespace llvm {

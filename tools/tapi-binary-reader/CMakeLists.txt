@@ -1,5 +1,3 @@
-set(LLVM_EXPORTED_SYMBOL_FILE ${CMAKE_CURRENT_SOURCE_DIR}/tapi-binary-reader.exports)
-
 set(LLVM_LINK_COMPONENTS
   Support
   )

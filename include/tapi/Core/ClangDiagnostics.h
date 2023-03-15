@@ -17,9 +17,9 @@
 #define TAPI_CLANG_DIAGNOSTICS_H
 
 #include "clang/Basic/Diagnostic.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/Architecture.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
+#include "llvm/TextAPI/Platform.h"
 namespace llvm {
 namespace MachO {
 

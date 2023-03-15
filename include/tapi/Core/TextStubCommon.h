@@ -21,10 +21,10 @@
 #include "clang/Basic/LangStandard.h"
 #include "llvm/ADT/StringSwitch.h"
 #include "llvm/Support/YAMLTraits.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
-#include "llvm/TextAPI/MachO/Platform.h"
-#include "llvm/TextAPI/MachO/Target.h"
+#include "llvm/TextAPI/Architecture.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
+#include "llvm/TextAPI/Platform.h"
+#include "llvm/TextAPI/Target.h"
 
 using UUID = std::pair<llvm::MachO::Target, std::string>;
 

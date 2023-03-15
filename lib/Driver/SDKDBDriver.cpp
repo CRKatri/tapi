@@ -46,7 +46,7 @@
 #include "llvm/Support/Process.h"
 #include "llvm/Support/VirtualFileSystem.h"
 #include "llvm/Support/raw_ostream.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
 #include <system_error>
 
 using namespace llvm;
@@ -776,7 +776,7 @@ static Error computeSwiftInterfacesFromFramework(sdkdb::Context &context,
     return make_error<StringError>("unable to create temporary input file", ec);
   FileRemover removeVFSFile(vfsFile);
   std::error_code ec;
-  raw_fd_ostream vfsMap(vfsFile, ec, sys::fs::F_None);
+  raw_fd_ostream vfsMap(vfsFile, ec, sys::fs::OF_None);
   if (ec)
     return make_error<StringError>("cannot create vfs file", ec);
   auto &vfsOverlay =

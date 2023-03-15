@@ -21,7 +21,7 @@
 #include "llvm/Object/MachOUniversal.h"
 #include "llvm/Support/Error.h"
 #include "llvm/Support/MemoryBuffer.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
 
 TAPI_NAMESPACE_INTERNAL_BEGIN
 

@@ -87,7 +87,7 @@ private:
   ASTContext &context;
   SourceManager &sourceManager;
   std::unique_ptr<clang::ItaniumMangleContext> mc;
-  const DataLayout &dataLayout;
+  const DataLayout dataLayout;
 };
 
 class APIVisitorAction : public ASTFrontendAction {

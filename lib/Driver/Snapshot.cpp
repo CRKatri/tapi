@@ -510,7 +510,7 @@ void Snapshot::writeSnapshot(bool isCrash) {
   }
 
   std::error_code ec;
-  raw_fd_ostream out(runScript, ec, sys::fs::OpenFlags::F_Text);
+  raw_fd_ostream out(runScript, ec, sys::fs::OpenFlags::OF_Text);
   yaml::Output yout(out);
   yout << *this;
   if (ec) {

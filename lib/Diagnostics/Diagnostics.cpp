@@ -161,7 +161,7 @@ void DiagnosticsEngine::setupDiagnosticsFile(StringRef output) {
   if (output != "-") {
     // Create the output stream.
     auto fileOS = std::make_unique<llvm::raw_fd_ostream>(
-        output, ec, llvm::sys::fs::F_Append | llvm::sys::fs::F_Text);
+        output, ec, llvm::sys::fs::OF_Append | llvm::sys::fs::OF_Text);
     if (ec) {
       report(diag::err_cannot_open_file)
           << output << ec.message();

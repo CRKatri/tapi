@@ -18,7 +18,7 @@
 #include "tapi/Core/LLVM.h"
 #include "tapi/Defines.h"
 #include "llvm/Support/Error.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/Platform.h"
 
 #include <functional>
 #include <string>

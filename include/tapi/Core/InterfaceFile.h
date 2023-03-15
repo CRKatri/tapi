@@ -27,10 +27,10 @@
 #include "llvm/Support/Error.h"
 #include "llvm/Support/MemoryBuffer.h"
 #include "llvm/Support/Path.h"
-#include "llvm/TextAPI/MachO/Architecture.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
-#include "llvm/TextAPI/MachO/Target.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/Architecture.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
+#include "llvm/TextAPI/Target.h"
+#include "llvm/TextAPI/Platform.h"
 
 namespace llvm {
 namespace yaml {

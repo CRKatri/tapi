@@ -20,8 +20,8 @@
 #include "llvm/ADT/StringRef.h"
 #include "llvm/ADT/StringSwitch.h"
 #include "llvm/ADT/Triple.h"
-#include "llvm/TextAPI/MachO/Platform.h"
-#include "llvm/TextAPI/MachO/Target.h"
+#include "llvm/TextAPI/Platform.h"
+#include "llvm/TextAPI/Target.h"
 #include "llvm/Support/Path.h"
 
 using namespace llvm;

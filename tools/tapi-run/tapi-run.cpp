@@ -181,7 +181,7 @@ int main(int argc, const char *argv[]) {
     outputFilename = "-";
 
   std::error_code ec2;
-  raw_fd_ostream file(outputFilename, ec2, sys::fs::OpenFlags::F_None);
+  raw_fd_ostream file(outputFilename, ec2, sys::fs::OpenFlags::OF_None);
 
   auto currentBenchmarkName = sys::path::stem(path);
 

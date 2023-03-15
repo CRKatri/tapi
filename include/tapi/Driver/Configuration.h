@@ -22,7 +22,7 @@
 #include "clang/Frontend/FrontendOptions.h"
 #include "llvm/ADT/StringRef.h"
 #include "llvm/ADT/Triple.h"
-#include "llvm/TextAPI/MachO/ArchitectureSet.h"
+#include "llvm/TextAPI/ArchitectureSet.h"
 #include <map>
 #include <string>
 

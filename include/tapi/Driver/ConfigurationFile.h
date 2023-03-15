@@ -20,7 +20,7 @@
 #include "tapi/Core/Path.h"
 #include "tapi/Defines.h"
 #include "clang/Frontend/FrontendOptions.h"
-#include "llvm/TextAPI/MachO/Platform.h"
+#include "llvm/TextAPI/Platform.h"
 #include <string>
 #include <utility>
 #include <vector>

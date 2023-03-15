@@ -1428,7 +1428,7 @@ void Options::printHelp() const {
     return;
   }
 
-  table->PrintHelp(
+  table->printHelp(
       outs(),
       (programName + " " + getNameFromTAPICommand(command)).str().c_str(),
       toolName, /*FlagsToInclude=*/getIncludeOptionFlagMasks(command),

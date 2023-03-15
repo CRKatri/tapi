@@ -204,7 +204,7 @@ APIVisitor::APIVisitor(FrontendContext &frontend)
       sourceManager(context.getSourceManager()),
       mc(clang::ItaniumMangleContext::create(context,
                                              context.getDiagnostics())),
-      dataLayout(context.getTargetInfo().getDataLayout()) {}
+      dataLayout(context.getTargetInfo().getDataLayoutString()) {}
 
 void APIVisitor::HandleTranslationUnit(ASTContext &context) {
   if (context.getDiagnostics().hasErrorOccurred())
