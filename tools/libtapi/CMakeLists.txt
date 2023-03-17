@@ -26,7 +26,7 @@ set_target_properties(libtapi
 set(DYLIB_VERSION "${LLVM_VERSION_MAJOR}.${LLVM_VERSION_MINOR}.${LLVM_VERSION_PATCH}")
 set_property(TARGET libtapi APPEND_STRING
   PROPERTY
-  LINK_FLAGS " -current_version ${DYLIB_VERSION} -compatibility_version 1 -allowable_client ld"
+  LINK_FLAGS " -current_version ${DYLIB_VERSION} -compatibility_version 1"
   )
 
 if(LINKER_SUPPORTS_NO_INITS)
